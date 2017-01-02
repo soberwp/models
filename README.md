@@ -221,16 +221,16 @@ Bonus: `"active": false` stops the taxonomy from being created.
 
 ## Updates
 
-### Composer:
+#### Composer:
 
-**Change the composer.json version to ^1.0.0**<br>
-Please check [CHANGELOG.md](CHANGELOG.md) for any breaking changes before updating.
+* Change the composer.json version to ^1.0.0**
+* Check [CHANGELOG.md](CHANGELOG.md) for any breaking changes before updating.
 
 ```shell
 $ composer update
 ```
 
-### WordPress:
+#### WordPress:
 
 Includes support for [github-updater](https://github.com/afragen/github-updater) to keep track on updates through the WordPress backend.
 * Download [github-updater](https://github.com/afragen/github-updater)
