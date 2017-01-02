@@ -217,7 +217,7 @@ Explanation: `"links": (string|array)` assigns the taxonomy to post types. Defau
 }
 ```
 
-Bonus: `"active": false` stops the taxonomy from being created.
+Bonus: `"active": false` stops the taxonomy from being created. Default is set to true.
 
 ## Updates
 
