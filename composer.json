@@ -1,0 +1,39 @@
+{
+  "name": "soberwp/models",
+  "type": "wordpress-plugin",
+  "license": "MIT",
+  "description": "Simple WordPress plugin to create custom post types and taxonomies using JSON files.",
+  "homepage": "https://github.com/soberwp",
+  "authors": [
+    {
+      "name": "Darren Jacoby",
+      "email": "darren@jacoby.co.za",
+      "homepage": "https://github.com/darrenjacoby"
+    }
+  ],
+  "keywords": [
+    "wordpress"
+  ],
+  "support": {
+    "issues": "https://github.com/soberwp/models/issues"
+  },
+  "require": {
+    "php": ">=5.4.0",
+    "composer/installers": "~1.0",
+    "hassankhan/config": "^0.10.0"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Sober\\Models\\": "src/",
+      "Sober\\Models\\Model\\": "src/Model/"
+    }
+  },
+  "scripts": {
+    "test": [
+      "vendor/bin/phpcs --extensions=php --ignore=vendor/ ."
+    ]
+  }
+}

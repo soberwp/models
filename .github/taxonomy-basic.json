@@ -1,0 +1,13 @@
+{
+  "type": "tax",
+  "name": "genre",
+  "links": [
+    "post", 
+    "book"
+  ],
+  "labels": {
+    "one": "Genre",
+    "many": "Genres",
+    "text_domain": "sage"
+  }
+}
