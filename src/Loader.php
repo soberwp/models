@@ -16,14 +16,11 @@ class Loader
     {
         $this->getPath();
         $this->createFolder();
-        foreach (glob($this->path . '/*.json') as $this->file) {
-            $this->loadConfig();
-            $this->routeType();
-        }
+        $this->loadFiles();
     }
 
     /**
-     * Get json file path
+     * Get path
      *
      * @return string
      */
@@ -32,9 +29,27 @@ class Loader
         $this->path = (has_filter('sober/models/path') ?  apply_filters('sober/models/path', rtrim($path)) : get_stylesheet_directory() . '/model-json');
     }
 
+    /**
+     * Create folder
+     *
+     * Check if folder exists, else create the new folder
+     */
     protected function createFolder()
     {
         if (!file_exists($this->path)) mkdir($this->path);
+    }
+
+    /**
+     * Load files
+     *
+     * @return string
+     */
+    protected function loadFiles()
+    {
+        foreach (glob($this->path . '/*.json') as $this->file) {
+            $this->loadConfig();
+            $this->routeType();
+        }
     }
 
     /**
