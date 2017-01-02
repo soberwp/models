@@ -26,7 +26,7 @@ $ wp plugin activate models
 
 By default, Models will create a folder called `model-json/` within the active theme directory. 
 
-If you'd like to specify a custom path you can use the following filter within your themes `functions.php` file; 
+You can use a custom path using the filter below within your themes `functions.php` file; 
 ```php
 
 add_filter('sober/models/path', function () {
@@ -34,7 +34,7 @@ add_filter('sober/models/path', function () {
 });
 ```
 
-That's it, now all you need to do is add `model-name.json` files within the default or specified folder to register your models.
+That's it, now go ahead and add `model-name.json` files in the folder to begin creating your models.
 
 ## Models
 
