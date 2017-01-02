@@ -170,7 +170,7 @@ Bonus: short-hand `"type": "tax"` also works.
 }
 ```
 
-Explanation: `"links": "(string|array)"` assigns the taxonomy to post types. Defaults to `"links": "post"`
+Explanation: `"links": (string|array)` assigns the taxonomy to post types. Defaults to `"links": "post"`
 
 #### All Fields:
 
@@ -219,7 +219,7 @@ Explanation: `"links": "(string|array)"` assigns the taxonomy to post types. Def
 
 Bonus: `"active": false` stops the taxonomy from being created.
 
-## Updating
+## Updates
 
 ### Composer:
 
