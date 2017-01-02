@@ -4,10 +4,6 @@ Simple WordPress plugin to create custom post types and taxonomies using JSON fi
 
 ## Installation
 
-#### Requirements
-
-* [PHP](http://php.net/manual/en/install.php) >= 5.6.x
-
 #### Composer:
 
 Recommended method; [Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
@@ -21,6 +17,10 @@ $ wp plugin activate models
 * Download the [zip file](https://github.com/soberwp/models/archive.master.zip)
 * Unzip to your sites plugin folder
 * Activate via WordPress
+
+#### Requirements
+
+* [PHP](http://php.net/manual/en/install.php) >= 5.6.x
 
 ## Usage
 
@@ -36,7 +36,7 @@ add_filter('sober/models/path', function () {
 
 That's it, now all you need to do is add `model-name.json` files within the default or specified folder to register your models.
 
-### Models
+## Models
 
 The `.json` data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place within `"config": {}`
 
