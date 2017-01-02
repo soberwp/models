@@ -144,7 +144,7 @@ Create a custom taxonomy.
 ```json
 {
   "type": "taxonomy",
-  "name": "book"
+  "name": "genre"
 }
 ```
 
