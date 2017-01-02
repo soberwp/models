@@ -18,13 +18,13 @@ $ wp plugin activate models
 * Unzip to your sites plugin folder
 * Activate via WordPress
 
-#### Requirements
+#### Requirements:
 
 * [PHP](http://php.net/manual/en/install.php) >= 5.6.x
 
 ## Usage
 
-By default, Models will create a folder called `model-json/` within the active theme directory. 
+By default folder `model-json/` will be created within the active theme directory. 
 
 You can use a custom path using the filter below within your themes `functions.php` file; 
 ```php
