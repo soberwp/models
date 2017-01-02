@@ -38,7 +38,7 @@ That's it, now go ahead and add `model-name.json` files in the folder to begin c
 
 ## Models
 
-The `.json` data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place within `"config": {}`
+The JSON data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place within `"config": {}`
 
 If values are not specified, defaults are the same as WordPress defaults.
 
