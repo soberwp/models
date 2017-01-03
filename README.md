@@ -24,13 +24,13 @@ $ wp plugin activate models
 
 ## Usage
 
-By default folder `model-json/` will be created within the active theme directory. 
+By default, folder `model-json/` will be created within the active theme directory. 
 
 You can use a custom path using the filter below within your themes `functions.php` file; 
 ```php
 
 add_filter('sober/models/path', function () {
-    return get_stylesheet_directory() . '/your-custom-directory';
+    return get_stylesheet_directory() . '/your-custom-folder';
 });
 ```
 
