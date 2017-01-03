@@ -21,8 +21,6 @@ class Loader
 
     /**
      * Get path
-     *
-     * @return string
      */
     protected function getPath()
     {
@@ -31,8 +29,6 @@ class Loader
 
     /**
      * Create folder
-     *
-     * Check if folder exists, else create the new folder
      */
     protected function createFolder()
     {
@@ -41,8 +37,6 @@ class Loader
 
     /**
      * Load files
-     *
-     * @return string
      */
     protected function loadFiles()
     {
@@ -54,8 +48,6 @@ class Loader
 
     /**
      * Load the config
-     *
-     * Assign new object to Config class
      */
     protected function loadConfig()
     {
@@ -64,8 +56,6 @@ class Loader
 
     /**
      * Route model type
-     *
-     * Determine the type of each model and route to correct class
      */
     protected function routeType()
     {
