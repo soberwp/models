@@ -69,7 +69,7 @@ class Loader
      */
     protected function routeType()
     {
-        if (in_array($this->config['type'], ['post-type', 'cpt', 'posttype'])) {
+        if (in_array($this->config['type'], ['post-type', 'cpt', 'posttype', 'post_type'])) {
             (new PostType($this->config))->run();
         }
         if (in_array($this->config['type'], ['taxonomy', 'tax', 'category', 'tag'])) {
