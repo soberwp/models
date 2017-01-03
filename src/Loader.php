@@ -15,12 +15,12 @@ class Loader
     public function __construct()
     {
         $this->getPath();
-        $this->createFolder();
-        $this->loadFiles();
+        $this->createPath();
+        $this->loadConfig();
     }
 
     /**
-     * Get path
+     * Get custom path
      */
     protected function getPath()
     {
@@ -28,42 +28,55 @@ class Loader
     }
 
     /**
-     * Create folder
+     * Create path
      */
-    protected function createFolder()
+    protected function createPath()
     {
         if (!file_exists($this->path)) mkdir($this->path);
     }
 
     /**
-     * Load files
-     */
-    protected function loadFiles()
-    {
-        foreach (glob($this->path . '/*.json') as $this->file) {
-            $this->loadConfig();
-            $this->routeType();
-        }
-    }
-
-    /**
-     * Load the config
+     * Load config
      */
     protected function loadConfig()
     {
-        $this->config = new Config($this->file);
+        $path = new \RecursiveDirectoryIterator($this->path);
+        foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->path)) as $filename => $file) {   
+            if (pathinfo($file, PATHINFO_EXTENSION) === 'json') {
+                $this->config = new Config($file);
+                ($this->isMultipleConfig() ? $this->loadEachConfig() : $this->routeConfig($this->config));
+            }
+        }
     }
 
     /**
-     * Route model type
+     * Is multidimensional config
      */
-    protected function routeType()
+    protected function isMultipleConfig()
     {
-        if (in_array($this->config['type'], ['post-type', 'cpt', 'posttype', 'post_type'])) {
-            (new PostType($this->config))->run();
+        return (is_array(current($this->config->all())));
+    }
+
+    /**
+     * Load each from multidimensional config
+     */
+    protected function loadEachConfig()
+    {   
+        foreach($this->config as $config) {
+            $this->routeConfig($config);
         }
-        if (in_array($this->config['type'], ['taxonomy', 'tax', 'category', 'tag'])) {
-            (new Taxonomy($this->config))->run();
+    }
+
+    /**
+     * Route config to class
+     */
+    protected function routeConfig($config)
+    {
+        if (in_array($config['type'], ['post-type', 'cpt', 'posttype', 'post_type'])) {
+            (new PostType($config))->run();
+        }
+        if (in_array($config['type'], ['taxonomy', 'tax', 'category', 'cat', 'tag'])) {
+            (new Taxonomy($config))->run();
         }
     }
 }
