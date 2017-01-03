@@ -183,7 +183,7 @@ Create a custom taxonomy.
 
 #### Composer:
 
-* Change the composer.json version to ^1.0.0**
+* Change the composer.json version to ^1.0.1**
 * Check [CHANGELOG.md](CHANGELOG.md) for any breaking changes before updating.
 
 ```shell

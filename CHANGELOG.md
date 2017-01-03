@@ -1,2 +1,6 @@
+### 1.0.1: 03nd January 2017
+* Multidimensional array support added for json files
+* Include recursive support for $path subfolders
+
 ### 1.0.0: 02nd January 2017
 * Release Models
