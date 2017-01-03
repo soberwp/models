@@ -57,7 +57,7 @@ Create a custom post type.
 }
 ```
 
-Bonus: short-hand `"type": "cpt"` also works.
+Tip: short-hand `"type": "cpt"` also works.
 
 #### Basic Example:
 
@@ -131,7 +131,7 @@ In this case `"labels": {}` are useless because `"Book"` and `"Books"` would hav
 }
 ```
 
-Bonus: `"active": false` stops the taxonomy from being created. Default is set to true.
+Tip: `"active": false` stops the post type from being created. Default is set to true.
 
 ### Taxonomies
 
@@ -148,7 +148,7 @@ Create a custom taxonomy.
 }
 ```
 
-Bonus: short-hand `"type": "tax"` also works.
+Tip: short-hand `"type": "tax"` also works.
 
 #### Basic Example:
 
@@ -217,7 +217,7 @@ Explanation: `"links": (string|array)` assigns the taxonomy to post types. Defau
 }
 ```
 
-Bonus: `"active": false` stops the taxonomy from being created. Default is set to true.
+Tip: `"active": false` stops the taxonomy from being created. Default is set to true.
 
 ## Updates
 
