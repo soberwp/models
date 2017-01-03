@@ -2,9 +2,7 @@
   "type": "cpt",
   "name": "book",
   "supports": [
-    "title", 
-    "editor", 
-    "thumbnail"
+    "title", "editor", "thumbnail"
   ],
   "labels": {
     "one": "Book",

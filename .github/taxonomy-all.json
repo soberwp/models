@@ -3,8 +3,7 @@
   "type": "tax",
   "name": "genre",
   "links": [
-    "post", 
-    "book"
+    "post", "book"
   ],
   "labels": {
     "has_one": "Genre",

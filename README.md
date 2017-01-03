@@ -34,7 +34,7 @@ add_filter('sober/models/path', function () {
 });
 ```
 
-That's it, now go ahead and add `model-name.json` files in the folder to begin creating your models.
+That's it, now go ahead and add `model-name.json` files in the folder or subfolders to begin creating your models.
 
 ## Models
 
@@ -57,9 +57,7 @@ Create a custom post type.
 }
 ```
 
-Tip: short-hand `"type": "cpt"` also works.
-
-#### Basic Example:
+#### Basic:
 
 [post-type-basic.json](.github/post-type-basic.json)
 
@@ -68,9 +66,7 @@ Tip: short-hand `"type": "cpt"` also works.
   "type": "cpt",
   "name": "book",
   "supports": [
-    "title", 
-    "editor", 
-    "thumbnail"
+    "title", "editor", "thumbnail"
   ],
   "labels": {
     "one": "Book",
@@ -80,58 +76,39 @@ Tip: short-hand `"type": "cpt"` also works.
 }
 ```
 
-In this case `"labels": {}` are useless because `"Book"` and `"Books"` would have been generated from the name.
+In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"` would have been generated from the name.
+
+#### Multidimensional:
+
+[post-type-multi.json](.github/post-type-multi.json)
+
+```json
+[
+  {
+    "type": "cpt",
+    "name": "book",
+    "supports": [
+      "title", "editor", "thumbnail"
+    ]
+  },
+  {
+    "type": "cpt",
+    "name": "album",
+    "supports": [
+      "title", "editor", "comments"
+    ]
+  }
+]
+```
 
 #### All Fields:
 
-[post-type-all.json](.github/post-type-all.json) &mdash; includes all omitted label `"overrides": {}`
+[post-type-all.json](.github/post-type-all.json)
 
-```json
-{
-  "active": true,
-  "type": "cpt",
-  "name": "book",
-  "supports": [
-    "title", 
-    "editor", 
-    "comments", 
-    "revisions", 
-    "trackbacks", 
-    "author", 
-    "excerpt", 
-    "page-attributes", 
-    "thumbnail", 
-    "custom-fields", 
-    "post-formats"
-  ],
-  "labels": {
-    "has_one": "Book",
-    "has_many": "Books",
-    "text_domain": "sage",
-    "overrides": {}
-  },
-  "config": {
-    "public": true,
-    "publicly_queryable": true,
-    "show_ui": true,
-    "show_in_menu": true,
-    "query_var": true,
-    "has_archive": true,
-    "hierarchical": false,
-    "menu_position": null,
-    "can_export": true,
-    "capability_type": "post",
-    "rewrite": {
-      "slug": "book",
-      "with_front": true,
-      "feeds": true,
-      "pages": true
-    }
-  }
-}
-```
+#### Post Type Tips:
 
-Tip: `"active": false` stops the post type from being created. Default is set to true.
+* `"active": false` stops the post type from being created. Default is set to true.
+* `"type": "post-type"` also accepts a shorthand `"type": "cpt"`;
 
 ### Taxonomies
 
@@ -148,9 +125,7 @@ Create a custom taxonomy.
 }
 ```
 
-Tip: short-hand `"type": "tax"` also works.
-
-#### Basic Example:
+#### Basic:
 
 [taxonomy-basic.json](.github/taxonomy-basic.json)
 
@@ -159,8 +134,7 @@ Tip: short-hand `"type": "tax"` also works.
   "type": "tax",
   "name": "genre",
   "links": [
-    "post", 
-    "book"
+    "post", "book"
   ],
   "labels": {
     "one": "Book Genre",
@@ -170,54 +144,40 @@ Tip: short-hand `"type": "tax"` also works.
 }
 ```
 
-Explanation: `"links": (string|array)` assigns the taxonomy to post types. Defaults to `"links": "post"`
+`"links": (string|array)` assigns the taxonomy to post types. Defaults to `"links": "post"`
+
+#### Multidimensional:
+
+[taxonomy-multi.json](.github/taxonomy-multi.json)
+
+```json
+[
+  {
+    "type": "category",
+    "name": "genre",
+    "links": "book"
+  },
+  {
+    "type": "tag",
+    "name": "author",
+    "links": "book"
+  }
+]
+```
+
+`"type": "category"` and `"type": "tag"` shorthands are explained below under Tips.
 
 #### All Fields:
 
-[taxonomy-all.json](.github/taxonomy-all.json) &mdash; includes all omitted label `"overrides": {}`
+[taxonomy-all.json](.github/taxonomy-all.json)
 
-```json
-{
-  "active": true,
-  "type": "tax",
-  "name": "genre",
-  "links": [
-    "post", 
-    "book"
-  ],
-  "labels": {
-    "has_one": "Genre",
-    "has_many": "Genres",
-    "text_domain": "sage",
-    "overrides": {}
-  },
-  "config": {
-    "public": true,
-    "publicly_queryable": true,
-    "show_ui": true,
-    "show_in_menu": true,
-    "show_in_nav_menus": true,
-    "show_in_rest": true,
-    "rest_base": "genre",
-    "rest_controller_class": "WP_REST_Terms_Controller",
-    "show_tagcloud": true,
-    "show_in_quick_edit": true,
-    "show_admin_column": false,
-    "capabilities": {
-      "manage_terms": "manage_categories",
-      "edit_terms": "manage_categories",
-      "delete_terms": "manage_categories",
-      "assign_terms": "edit_posts"
-    },
-    "rewrite": {
-      "slug": "genre",
-      "hierarchical": false
-    }
-  }
-}
-```
+#### Taxonomy Tips:
 
-Tip: `"active": false` stops the taxonomy from being created. Default is set to true.
+* `"active": false` stops the taxonomy from being created. Default is set to true.
+* `"type": "taxonomy"` also accepts shorthands;
+  * `"type": "tax"`
+  * `"type": "category"` or `"type": "cat"` creates a category taxonomy.
+  * `"type": "tag"` creates a tag taxonomy.
 
 ## Updates
 
