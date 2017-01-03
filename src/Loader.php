@@ -41,7 +41,7 @@ class Loader
     protected function loadConfig()
     {
         $path = new \RecursiveDirectoryIterator($this->path);
-        foreach (new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($this->path)) as $filename => $file) {   
+        foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {   
             if (pathinfo($file, PATHINFO_EXTENSION) === 'json') {
                 $this->config = new Config($file);
                 ($this->isMultipleConfig() ? $this->loadEachConfig() : $this->routeConfig($this->config));
