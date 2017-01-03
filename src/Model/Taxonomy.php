@@ -33,6 +33,9 @@ class Taxonomy extends Model
         if ($this->data['config']) {
             $this->config = $this->data['config'];
         }
+        if (in_array($this->data['type'], ['cat', 'category'])) {
+            $this->config = ['hierarchical' => true];
+        }
     }
 
     /**
