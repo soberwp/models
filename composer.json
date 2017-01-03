@@ -1,6 +1,6 @@
 {
   "name": "soberwp/models",
-  "type": "wordpress-plugin",
+  "type": "wordpress-muplugin",
   "license": "MIT",
   "description": "Simple WordPress plugin to create custom post types and taxonomies using JSON files.",
   "homepage": "https://github.com/soberwp",
