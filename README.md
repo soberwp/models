@@ -76,7 +76,7 @@ Create a custom post type.
 }
 ```
 
-In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"` would have been generated from the name.
+In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"` would have been generated from `"name"`.
 
 #### Multidimensional:
 
@@ -107,7 +107,7 @@ In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"
 
 #### Post Type Tips:
 
-* `"active": false` stops the post type from being created. Default is set to true.
+* `"active": false` stops the post type from being created. Default is set to `true`.
 * `"type": "post-type"` also accepts a shorthand `"type": "cpt"`;
 
 ### Taxonomies
@@ -173,7 +173,7 @@ Create a custom taxonomy.
 
 #### Taxonomy Tips:
 
-* `"active": false` stops the taxonomy from being created. Default is set to true.
+* `"active": false` stops the taxonomy from being created. Default is set to `true`.
 * `"type": "taxonomy"` also accepts shorthands;
   * `"type": "tax"`
   * `"type": "category"` or `"type": "cat"` creates a category taxonomy.
