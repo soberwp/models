@@ -80,7 +80,7 @@ In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"
 
 #### Multiple:
 
-[post-type-multi.json](.github/post-type-multi.json)
+[post-type-multiple.json](.github/post-type-multiple.json)
 
 ```json
 [
@@ -148,7 +148,7 @@ Create a custom taxonomy.
 
 #### Multiple:
 
-[taxonomy-multi.json](.github/taxonomy-multi.json)
+[taxonomy-multiple.json](.github/taxonomy-multiple.json)
 
 ```json
 [
