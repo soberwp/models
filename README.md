@@ -78,7 +78,7 @@ Create a custom post type.
 
 In the above example, `"labels": {}` are redundant because `"Book"` and `"Books"` would have been generated from `"name"`.
 
-#### Multidimensional:
+#### Multiple:
 
 [post-type-multi.json](.github/post-type-multi.json)
 
@@ -146,7 +146,7 @@ Create a custom taxonomy.
 
 `"links": (string|array)` assigns the taxonomy to post types. Defaults to `"links": "post"`
 
-#### Multidimensional:
+#### Multiple:
 
 [taxonomy-multi.json](.github/taxonomy-multi.json)
 
