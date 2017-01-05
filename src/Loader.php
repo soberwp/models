@@ -3,6 +3,7 @@
 namespace Sober\Models;
 
 use Noodlehaus\Config;
+use Sober\Models\ConfigNoFile;
 use Sober\Models\Model\PostType;
 use Sober\Models\Model\Taxonomy;
 
@@ -63,7 +64,7 @@ class Loader
     protected function loadEachConfig()
     {   
         foreach($this->config as $config) {
-            $this->routeConfig($config);
+            $this->routeConfig(new ConfigNoFile($config));
         }
     }
 
