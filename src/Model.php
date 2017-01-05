@@ -24,9 +24,7 @@ class Model
         if ($this->isDisabled()) return;
 
         $this->setName();
-        $this->setLabelOne();
-        $this->setLabelMany();
-        $this->setLabeli18n();
+        $this->setNameLabels();
     }
 
     /**
@@ -62,37 +60,19 @@ class Model
     }
 
     /**
-     * Set singular label defaults
+     * Set required labels
      *
-     * If key labels.has-one doesn't exist, use post type name
+     * Based on name, or keys labels.has-one and labels.has-many
      */
-    protected function setLabelOne()
+    protected function setNameLabels()
     {
         $this->one = ($this->data['labels.has_one'] ? $this->data['labels.has_one'] : ucfirst($this->name));
-    }
-
-    /**
-     * Set plural label defaults
-     *
-     * If key labels.has-many doesn't exist, use post type name and append 's'
-     */
-    protected function setLabelMany()
-    {
         $this->many = ($this->data['labels.has_many'] ? $this->data['labels.has_many'] : ucfirst($this->name . 's'));
-    }
-
-    /**
-     * Set text domain for labels
-     *
-     * If key labels.text-domain doesn't exist, set to 'sober'
-     */
-    protected function setLabeli18n()
-    {
         $this->i18n = ($this->data['labels.text_domain'] ? $this->data['labels.text_domain'] : 'sober');
     }
 
     /**
-     * Set default label overrides
+     * Set label overrides
      *
      * If key labels.overrides exists, add to or replace label defaults
      */

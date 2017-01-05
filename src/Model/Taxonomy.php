@@ -11,16 +11,9 @@ class Taxonomy extends Model
 
     public function run()
     {
-        // configs
-        $this->setConfigDefaults();
-        $this->setConfig();
-        $this->setLinks();
-        // labels
-        $this->setLabelDefaults();
-        $this->setLabels();
-        // args and register
-        $this->mergeArgs();
-        $this->registerTaxonomy();
+        $this->setDefaultConfig()->setConfig();
+        $this->setDefaultLabels()->setLabels();
+        $this->merge()->register();
     }
 
     /**
@@ -28,7 +21,7 @@ class Taxonomy extends Model
      *
      * Make public and change menu position
      */
-    protected function setConfigDefaults()
+    protected function setDefaultConfig()
     {
         if ($this->data['config']) {
             $this->config = $this->data['config'];
@@ -36,18 +29,10 @@ class Taxonomy extends Model
         if (in_array($this->data['type'], ['cat', 'category'])) {
             $this->config = ['hierarchical' => true];
         }
-    }
-
-    /**
-     * Set links
-     *
-     * Place array keys into a single value array if value is true
-     */
-    protected function setLinks()
-    {
         if ($this->data['links']) {
             $this->links = $this->data['links'];
         }
+        return $this;
     }
 
     /**
@@ -55,7 +40,7 @@ class Taxonomy extends Model
      *
      * Create an labels array and implement default singular and plural labels
      */
-    protected function setLabelDefaults()
+    protected function setDefaultLabels()
     {
         $this->labels = [
             'name'                       => _x($this->many, 'Taxonomy general name', $this->i18n),
@@ -78,27 +63,29 @@ class Taxonomy extends Model
             'items_list_navigation'      => __($this->many . ' list navigation', $this->i18n),
             'items_list'                 => __($this->many . ' list', $this->i18n)
         ];
+        return $this;
     }
 
     /**
-     * Merge arguments
+     * Merge
      *
-     * Array to be passed to WP register_taxonomy()
+     * Args to be passed to WP register_taxonomy()
      */
-    protected function mergeArgs()
+    protected function merge()
     {
         $this->args = [
             'labels' => $this->labels
         ];
         $this->args = array_merge($this->args, $this->config);
+        return $this;
     }
 
     /**
-     * Register Post Type
+     * Register
      *
      * Run WP register_taxonomy()
      */
-    protected function registerTaxonomy()
+    protected function register()
     {
         register_taxonomy($this->name, $this->links, $this->args);
     }

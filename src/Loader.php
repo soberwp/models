@@ -16,8 +16,8 @@ class Loader
     public function __construct()
     {
         $this->getPath();
-        $this->createPath();
-        $this->loadConfig();
+        $this->makeDir();
+        $this->load();
     }
 
     /**
@@ -29,23 +29,23 @@ class Loader
     }
 
     /**
-     * Create path
+     * Make directory
      */
-    protected function createPath()
+    protected function makeDir()
     {
         if (!file_exists($this->path)) mkdir($this->path);
     }
 
     /**
-     * Load config
+     * Load
      */
-    protected function loadConfig()
+    protected function load()
     {
         $path = new \RecursiveDirectoryIterator($this->path);
         foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {   
             if (pathinfo($file, PATHINFO_EXTENSION) === 'json') {
                 $this->config = new Config($file);
-                ($this->isMultipleConfig() ? $this->loadEachConfig() : $this->routeConfig($this->config));
+                ($this->isMultiple() ? $this->loadEach() : $this->route($this->config));
             }
         }
     }
@@ -53,7 +53,7 @@ class Loader
     /**
      * Is multidimensional config
      */
-    protected function isMultipleConfig()
+    protected function isMultiple()
     {
         return (is_array(current($this->config->all())));
     }
@@ -61,17 +61,17 @@ class Loader
     /**
      * Load each from multidimensional config
      */
-    protected function loadEachConfig()
+    protected function loadEach()
     {   
         foreach($this->config as $config) {
-            $this->routeConfig(new ConfigNoFile($config));
+            $this->route(new ConfigNoFile($config));
         }
     }
 
     /**
-     * Route config to class
+     * Route to class
      */
-    protected function routeConfig($config)
+    protected function route($config)
     {
         if (in_array($config['type'], ['post-type', 'cpt', 'posttype', 'post_type'])) {
             (new PostType($config))->run();

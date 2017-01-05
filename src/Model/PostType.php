@@ -11,16 +11,9 @@ class PostType extends Model
 
     public function run()
     {
-        // configs
-        $this->setConfigDefaults();
-        $this->setConfig();
-        $this->setSupports();
-        // labels
-        $this->setLabelDefaults();
-        $this->setLabels();
-        // args and register
-        $this->mergeArgs();
-        $this->registerPostType();
+        $this->setDefaultConfig()->setConfig();
+        $this->setDefaultLabels()->setLabels();
+        $this->merge()->register();
     }
 
     /**
@@ -28,28 +21,14 @@ class PostType extends Model
      *
      * Make public and change menu position
      */
-    protected function setConfigDefaults()
+    protected function setDefaultConfig()
     {
         $this->config = [
             'public'        => true,
             'menu_position' => 5
         ];
-    }
-
-    /**
-     * Set supports
-     *
-     * Place array keys into a single value array if value is true
-     */
-    protected function setSupports()
-    {
         $this->supports = $this->data['supports'];
-        /*
-        // removed in favour of array
-        if ($this->data['supports']) {
-            $this->supports = array_keys($this->data['supports'], true);
-        }
-        */
+        return $this;
     }
 
     /**
@@ -57,7 +36,7 @@ class PostType extends Model
      *
      * Create an labels array and implement default singular and plural labels
      */
-    protected function setLabelDefaults()
+    protected function setDefaultLabels()
     {
         $this->labels = [
             'name'                  => _x($this->many, 'Post type general name', $this->i18n),
@@ -82,20 +61,22 @@ class PostType extends Model
             'items_list_navigation' => __($this->many . ' list navigation', $this->i18n),
             'items_list'            => __($this->many . ' list', $this->i18n)
         ];
+        return $this;
     }
 
     /**
-     * Merge arguments
+     * Merge
      *
-     * Array to be passed to WP register_post_type()
+     * Args to be passed to WP register_post_type()
      */
-    protected function mergeArgs()
+    protected function merge()
     {
         $this->args = [
             'labels' => $this->labels,
             'supports' => $this->supports,
         ];
         $this->args = array_merge($this->args, $this->config);
+        return $this;
     }
 
     /**
@@ -103,7 +84,7 @@ class PostType extends Model
      *
      * Run WP register_post_type()
      */
-    protected function registerPostType()
+    protected function register()
     {
         register_post_type($this->name, $this->args);
     }
