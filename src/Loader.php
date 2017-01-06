@@ -63,7 +63,7 @@ class Loader
      */
     protected function loadEach()
     {   
-        foreach($this->config as $config) {
+        foreach ($this->config as $config) {
             $this->route(new ConfigNoFile($config));
         }
     }
