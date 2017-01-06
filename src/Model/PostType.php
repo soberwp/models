@@ -11,6 +11,8 @@ class PostType extends Model
 
     public function run()
     {
+        if ($this->isDisabled()) return;
+        
         $this->setDefaultConfig()->setConfig();
         $this->setDefaultLabels()->setLabels();
         $this->merge()->register();
@@ -80,7 +82,7 @@ class PostType extends Model
     }
 
     /**
-     * Register Post Type
+     * Register
      *
      * Run WP register_post_type()
      */

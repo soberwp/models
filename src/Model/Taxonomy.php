@@ -11,6 +11,8 @@ class Taxonomy extends Model
 
     public function run()
     {
+        if ($this->isDisabled()) return;
+        
         $this->setDefaultConfig()->setConfig();
         $this->setDefaultLabels()->setLabels();
         $this->merge()->register();
