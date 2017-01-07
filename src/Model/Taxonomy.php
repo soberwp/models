@@ -22,6 +22,7 @@ class Taxonomy extends Model
      * Set config defaults
      *
      * Make public and change menu position
+     * @return $this
      */
     protected function setDefaultConfig()
     {
@@ -41,6 +42,7 @@ class Taxonomy extends Model
      * Set default labels
      *
      * Create an labels array and implement default singular and plural labels
+     * @return $this
      */
     protected function setDefaultLabels()
     {
@@ -72,6 +74,7 @@ class Taxonomy extends Model
      * Merge
      *
      * Args to be passed to WP register_taxonomy()
+     * @return $this
      */
     protected function merge()
     {

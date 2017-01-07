@@ -22,6 +22,7 @@ class PostType extends Model
      * Set config defaults
      *
      * Make public and change menu position
+     * @return $this
      */
     protected function setDefaultConfig()
     {
@@ -37,6 +38,7 @@ class PostType extends Model
      * Set default labels
      *
      * Create an labels array and implement default singular and plural labels
+     * @return $this
      */
     protected function setDefaultLabels()
     {
@@ -70,6 +72,7 @@ class PostType extends Model
      * Merge
      *
      * Args to be passed to WP register_post_type()
+     * @return $this
      */
     protected function merge()
     {

@@ -22,7 +22,7 @@ $ wp plugin activate models
 
 * [PHP](http://php.net/manual/en/install.php) >= 5.6.x
 
-## Usage
+## Setup
 
 By default, folder `model-json/` will be created within the active theme directory. 
 
@@ -36,7 +36,7 @@ add_filter('sober/models/path', function () {
 
 That's it, now go ahead and add `model-name.json` files in the folder or subfolders to begin creating your models.
 
-## Models
+## Usage
 
 The JSON data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place within `"config": {}`
 
