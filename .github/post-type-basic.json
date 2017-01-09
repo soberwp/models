@@ -5,8 +5,8 @@
     "title", "editor", "thumbnail"
   ],
   "labels": {
-    "one": "Book",
-    "many": "Books",
+    "has_one": "Book",
+    "has_many": "Books",
     "text_domain": "sage"
   }
 }

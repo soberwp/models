@@ -5,8 +5,8 @@
     "post", "book"
   ],
   "labels": {
-    "one": "Genre",
-    "many": "Genres",
+    "has_one": "Genre",
+    "has_many": "Genres",
     "text_domain": "sage"
   }
 }

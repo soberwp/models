@@ -69,8 +69,8 @@ Create a custom post type.
     "title", "editor", "thumbnail"
   ],
   "labels": {
-    "one": "Book",
-    "many": "Books",
+    "has_one": "Book",
+    "has_many": "Books",
     "text_domain": "sage"
   }
 }
@@ -137,8 +137,8 @@ Create a custom taxonomy.
     "post", "book"
   ],
   "labels": {
-    "one": "Book Genre",
-    "many": "Book Genres",
+    "has_one": "Book Genre",
+    "has_many": "Book Genres",
     "text_domain": "sage"
   }
 }
