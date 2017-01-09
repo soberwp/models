@@ -130,6 +130,7 @@ class ComposerStaticInitff11f8a3e6a0145922196250cfb53094
         'Noodlehaus\\FileParser\\Php' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Php.php',
         'Noodlehaus\\FileParser\\Xml' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Xml.php',
         'Noodlehaus\\FileParser\\Yaml' => __DIR__ . '/..' . '/hassankhan/config/src/FileParser/Yaml.php',
+        'Sober\\Models\\ConfigNoFile' => __DIR__ . '/../..' . '/src/ConfigNoFile.php',
         'Sober\\Models\\Loader' => __DIR__ . '/../..' . '/src/Loader.php',
         'Sober\\Models\\Model' => __DIR__ . '/../..' . '/src/Model.php',
         'Sober\\Models\\Model\\PostType' => __DIR__ . '/../..' . '/src/Model/PostType.php',

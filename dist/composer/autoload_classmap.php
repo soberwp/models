@@ -94,6 +94,7 @@ return array(
     'Noodlehaus\\FileParser\\Php' => $vendorDir . '/hassankhan/config/src/FileParser/Php.php',
     'Noodlehaus\\FileParser\\Xml' => $vendorDir . '/hassankhan/config/src/FileParser/Xml.php',
     'Noodlehaus\\FileParser\\Yaml' => $vendorDir . '/hassankhan/config/src/FileParser/Yaml.php',
+    'Sober\\Models\\ConfigNoFile' => $baseDir . '/src/ConfigNoFile.php',
     'Sober\\Models\\Loader' => $baseDir . '/src/Loader.php',
     'Sober\\Models\\Model' => $baseDir . '/src/Model.php',
     'Sober\\Models\\Model\\PostType' => $baseDir . '/src/Model/PostType.php',
