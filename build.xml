@@ -22,6 +22,7 @@
         <fileset dir="vendor">
             <include name="autoload.php"></include>
             <include name="composer/**.php"></include>
+            <include name="hassankhan/**/**.php"></include>
         </fileset>
     </copy>
   </target>
