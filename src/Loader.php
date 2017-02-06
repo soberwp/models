@@ -16,8 +16,8 @@ class Loader
     public function __construct()
     {
         $this->getPath();
-        $this->makeDir();
         $this->load();
+        // removed $this->makeDir() before load();
     }
 
     /**
