@@ -41,11 +41,13 @@ class Loader
      */
     protected function load()
     {
-        $path = new \RecursiveDirectoryIterator($this->path);
-        foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {
-            if (in_array(pathinfo($file, PATHINFO_EXTENSION), ['json', 'php', 'yml', 'yaml'])) {
-                $this->config = new Config($file);
-                ($this->isMultiple() ? $this->loadEach() : $this->route($this->config));
+        if (file_exists($this->path)) {
+            $path = new \RecursiveDirectoryIterator($this->path);
+            foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {
+                if (in_array(pathinfo($file, PATHINFO_EXTENSION), ['json', 'php', 'yml', 'yaml'])) {
+                    $this->config = new Config($file);
+                    ($this->isMultiple() ? $this->loadEach() : $this->route($this->config));
+                }
             }
         }
     }
