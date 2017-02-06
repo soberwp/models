@@ -1,6 +1,6 @@
 # Models
 
-Simple WordPress plugin to create custom post types and taxonomies using JSON, PHP or YAML files.
+WordPress plugin to create custom post types and taxonomies using JSON, PHP or YAML files.
 
 ## Installation
 
