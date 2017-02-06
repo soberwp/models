@@ -23,6 +23,7 @@
             <include name="autoload.php"></include>
             <include name="composer/**.php"></include>
             <include name="hassankhan/**/**.php"></include>
+            <include name="symfony/yaml/**.php"></include>
         </fileset>
     </copy>
   </target>

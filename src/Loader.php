@@ -25,7 +25,7 @@ class Loader
      */
     protected function getPath()
     {
-        $this->path = (has_filter('sober/models/path') ?  apply_filters('sober/models/path', rtrim($path)) : get_stylesheet_directory() . '/model-json');
+        $this->path = (has_filter('sober/models/path') ?  apply_filters('sober/models/path', rtrim($path)) : get_stylesheet_directory() . '/model-config');
     }
 
     /**
@@ -42,8 +42,8 @@ class Loader
     protected function load()
     {
         $path = new \RecursiveDirectoryIterator($this->path);
-        foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {   
-            if (pathinfo($file, PATHINFO_EXTENSION) === 'json') {
+        foreach (new \RecursiveIteratorIterator($path) as $filename => $file) {
+            if (in_array(pathinfo($file, PATHINFO_EXTENSION), ['json', 'php', 'yml', 'yaml'])) {
                 $this->config = new Config($file);
                 ($this->isMultiple() ? $this->loadEach() : $this->route($this->config));
             }

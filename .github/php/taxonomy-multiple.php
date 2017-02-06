@@ -1,0 +1,13 @@
+<?php
+return [
+    [
+        'type' => 'category',
+        'name' => 'genre',
+        'links' => 'book',
+    ],
+    [
+        'type' => 'tag',
+        'name' => 'author',
+        'links' => 'book',
+    ],
+];

@@ -1,3 +1,6 @@
+### 1.0.3: 06th February 2017
+* Add PHP and YML file support
+
 ### 1.0.2: 05th January 2017
 * Fix multiple config per files bug
 * Refactor and chain methods

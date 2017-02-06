@@ -9,6 +9,7 @@ class ComposerStaticInitff11f8a3e6a0145922196250cfb53094
     public static $prefixLengthsPsr4 = array (
         'S' => 
         array (
+            'Symfony\\Component\\Yaml\\' => 23,
             'Sober\\Models\\Model\\' => 19,
             'Sober\\Models\\' => 13,
         ),
@@ -23,6 +24,10 @@ class ComposerStaticInitff11f8a3e6a0145922196250cfb53094
     );
 
     public static $prefixDirsPsr4 = array (
+        'Symfony\\Component\\Yaml\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/yaml',
+        ),
         'Sober\\Models\\Model\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/Model',
@@ -135,6 +140,17 @@ class ComposerStaticInitff11f8a3e6a0145922196250cfb53094
         'Sober\\Models\\Model' => __DIR__ . '/../..' . '/src/Model.php',
         'Sober\\Models\\Model\\PostType' => __DIR__ . '/../..' . '/src/Model/PostType.php',
         'Sober\\Models\\Model\\Taxonomy' => __DIR__ . '/../..' . '/src/Model/Taxonomy.php',
+        'Symfony\\Component\\Yaml\\Command\\LintCommand' => __DIR__ . '/..' . '/symfony/yaml/Command/LintCommand.php',
+        'Symfony\\Component\\Yaml\\Dumper' => __DIR__ . '/..' . '/symfony/yaml/Dumper.php',
+        'Symfony\\Component\\Yaml\\Escaper' => __DIR__ . '/..' . '/symfony/yaml/Escaper.php',
+        'Symfony\\Component\\Yaml\\Exception\\DumpException' => __DIR__ . '/..' . '/symfony/yaml/Exception/DumpException.php',
+        'Symfony\\Component\\Yaml\\Exception\\ExceptionInterface' => __DIR__ . '/..' . '/symfony/yaml/Exception/ExceptionInterface.php',
+        'Symfony\\Component\\Yaml\\Exception\\ParseException' => __DIR__ . '/..' . '/symfony/yaml/Exception/ParseException.php',
+        'Symfony\\Component\\Yaml\\Exception\\RuntimeException' => __DIR__ . '/..' . '/symfony/yaml/Exception/RuntimeException.php',
+        'Symfony\\Component\\Yaml\\Inline' => __DIR__ . '/..' . '/symfony/yaml/Inline.php',
+        'Symfony\\Component\\Yaml\\Parser' => __DIR__ . '/..' . '/symfony/yaml/Parser.php',
+        'Symfony\\Component\\Yaml\\Unescaper' => __DIR__ . '/..' . '/symfony/yaml/Unescaper.php',
+        'Symfony\\Component\\Yaml\\Yaml' => __DIR__ . '/..' . '/symfony/yaml/Yaml.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
