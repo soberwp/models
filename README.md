@@ -36,7 +36,7 @@ add_filter('sober/models/path', function () {
 });
 ```
 
-That's it, now go ahead and add `model-name.json` files, (`.php` and `.yaml` formats supported from v1.0.3) in the folder or subfolders to begin creating your models. Use [Unravel](https://github.com/soberwp/unravel) to move the config files outside of your theme path. 
+That's it, now go ahead and add `model-name.json` files, (`.php` and `.yaml` formats supported from v1.0.3) in the folder or subfolders to begin creating your models. Use [Unravel](https://github.com/soberwp/unravel) to automatically move the config files outside of your theme path for better separation of concerns. 
 
 ## Usage
 
