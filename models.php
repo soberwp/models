@@ -2,7 +2,7 @@
 /*
 Plugin Name:        Models
 Plugin URI:         http://github.com/soberwp/models
-Description:        WordPress plugin to create custom post types and taxonomies using JSON, PHP or YAML files
+Description:        WordPress plugin to create custom post types and taxonomies using JSON, YAML or PHP files
 Version:            1.0.3
 Author:             Sober
 Author URI:         http://github.com/soberwp/
