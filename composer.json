@@ -2,7 +2,7 @@
   "name": "soberwp/models",
   "type": "wordpress-muplugin",
   "license": "MIT",
-  "description": "WordPress plugin to create custom post types and taxonomies using JSON, PHP or YAML files.",
+  "description": "WordPress plugin to create custom post types and taxonomies using JSON, YAML or PHP files.",
   "homepage": "https://github.com/soberwp",
   "authors": [
     {
