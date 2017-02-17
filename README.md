@@ -4,7 +4,7 @@ WordPress plugin to create custom post types and taxonomies using JSON, YAML or 
 
 ## Installation
 
-**Please note:**  If you are updating to v1.0.3, the new default folder has changed from `model-json/` to `model-config/`
+**Please note:**  If you are updating to v1.0.4, the new default folder has changed from `model-json/` to `models/`
 
 #### Composer:
 
@@ -26,7 +26,7 @@ $ wp plugin activate models
 
 ## Setup
 
-By default, create folder `model-config/` within the active theme directory. 
+By default, create folder `models/` within the active theme directory. 
 
 Alternatively, you can define a custom path using the filter below within your themes `functions.php` file; 
 ```php
