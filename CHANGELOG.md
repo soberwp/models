@@ -1,4 +1,4 @@
-### 1.0.3: 06th February 2017
+### 1.0.4: 06th February 2017
 * Add PHP and YML file support
 
 ### 1.0.2: 05th January 2017
