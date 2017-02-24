@@ -60,6 +60,9 @@ return [
         'menu_position' => NULL,
         'can_export' => true,
         'capability_type' => 'post',
+        'taxonomies' => [
+            'category', 'post_tag'
+        ],
         'rewrite' => [
             'slug' => 'book',
             'with_front' => true,
