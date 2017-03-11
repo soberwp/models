@@ -17,7 +17,6 @@ class Loader
     {
         $this->getPath();
         $this->load();
-        // removed $this->makeDir() before load();
     }
 
     /**
@@ -26,14 +25,6 @@ class Loader
     protected function getPath()
     {
         $this->path = (has_filter('sober/models/path') ?  apply_filters('sober/models/path', rtrim($this->path)) : get_stylesheet_directory() . '/models');
-    }
-
-    /**
-     * Make directory
-     */
-    protected function makeDir()
-    {
-        if (!file_exists($this->path)) mkdir($this->path);
     }
 
     /**
@@ -64,7 +55,7 @@ class Loader
      * Load each from multidimensional config
      */
     protected function loadEach()
-    {   
+    {
         foreach ($this->config as $config) {
             $this->route(new ConfigNoFile($config));
         }

@@ -11,11 +11,15 @@ class PostType extends Model
 
     public function run()
     {
-        if ($this->isDisabled()) return;
+        if ($this->isDisabled()) {
+            return;
+        }
         
         $this->setDefaultConfig()->setConfig();
         $this->setDefaultLabels()->setLabels();
-        $this->merge()->register();
+
+        $this->merge();
+        $this->register();
     }
 
     /**
@@ -31,6 +35,7 @@ class PostType extends Model
             'menu_position' => 5
         ];
         $this->supports = $this->data['supports'];
+
         return $this;
     }
 
@@ -65,6 +70,7 @@ class PostType extends Model
             'items_list_navigation' => __($this->many . ' list navigation', $this->i18n),
             'items_list'            => __($this->many . ' list', $this->i18n)
         ];
+
         return $this;
     }
 
@@ -81,7 +87,6 @@ class PostType extends Model
             'supports' => $this->supports,
         ];
         $this->args = array_merge($this->args, $this->config);
-        return $this;
     }
 
     /**

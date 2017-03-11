@@ -11,11 +11,15 @@ class Taxonomy extends Model
 
     public function run()
     {
-        if ($this->isDisabled()) return;
+        if ($this->isDisabled()) {
+            return;
+        }
         
         $this->setDefaultConfig()->setConfig();
         $this->setDefaultLabels()->setLabels();
-        $this->merge()->register();
+    
+        $this->merge();
+        $this->register();
     }
 
     /**
@@ -35,6 +39,7 @@ class Taxonomy extends Model
         if ($this->data['links']) {
             $this->links = $this->data['links'];
         }
+
         return $this;
     }
 
@@ -67,6 +72,7 @@ class Taxonomy extends Model
             'items_list_navigation'      => __($this->many . ' list navigation', $this->i18n),
             'items_list'                 => __($this->many . ' list', $this->i18n)
         ];
+
         return $this;
     }
 
@@ -82,7 +88,6 @@ class Taxonomy extends Model
             'labels' => $this->labels
         ];
         $this->args = array_merge($this->args, $this->config);
-        return $this;
     }
 
     /**

@@ -21,7 +21,9 @@ class Model
     {
         $this->data = $data;
         
-        if ($this->isDisabled()) return;
+        if ($this->isDisabled()) {
+            return;
+        }
 
         $this->setName();
         $this->setNameLabels();
