@@ -16,7 +16,7 @@ $ wp plugin activate models
 
 [Roots Sage](https://roots.io/sage/)
 ```shell
-$ composer require soberwp/models:1.0.4-p
+$ composer require soberwp/models:1.0.5-p
 ```
 
 #### Manual:
