@@ -33,6 +33,8 @@ $ composer require soberwp/models:1.0.4-p
 
 By default, create folder `models/` within the active theme directory. 
 
+If you are a [Roots Sage](https://roots.io/sage/) the default folder is `app/models/`
+
 Alternatively, you can define a custom path using the filter below within your themes `functions.php` file; 
 ```php
 
