@@ -4,15 +4,21 @@ WordPress plugin to create custom post types and taxonomies using JSON, YAML or 
 
 ## Installation
 
-**Please note:**  If you are updating to v1.0.4, the new default folder has changed from `model-json/` to `models/`
-
 #### Composer:
 
-Recommended method; [Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
+Recommended method/s; 
+
+[Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
 ```shell
 $ composer require soberwp/models
 $ wp plugin activate models
 ```
+
+[Roots Sage](https://roots.io/sage/)
+```shell
+$ composer require soberwp/models:1.0.4-p
+```
+
 
 #### Manual:
 
