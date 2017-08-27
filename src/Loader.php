@@ -24,7 +24,13 @@ class Loader
      */
     protected function getPath()
     {
-        $this->path = (has_filter('sober/models/path') ?  apply_filters('sober/models/path', rtrim($this->path)) : get_stylesheet_directory() . '/models');
+        $default = (file_exists(dirname(get_template_directory()) . '/app') ? 
+                    dirname(get_template_directory()) . '/app/models' :
+                    get_stylesheet_directory() . '/models');
+
+        $this->path = (has_filter('sober/models/path') ? 
+                    apply_filters('sober/models/path', rtrim($this->path)) : 
+                    $default);
     }
 
     /**
