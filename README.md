@@ -19,7 +19,6 @@ $ wp plugin activate models
 $ composer require soberwp/models:1.0.4-p
 ```
 
-
 #### Manual:
 
 * Download the [zip file](https://github.com/soberwp/models/archive/master.zip)
@@ -225,4 +224,4 @@ Includes support for [github-updater](https://github.com/afragen/github-updater)
 
 ## Social
 
-* Twitter [@withjacoby](https://twitter.com/withjacoby)
+* For Models updates and other WordPress dev, follow [@withjacoby](https://twitter.com/withjacoby)
