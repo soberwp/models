@@ -1,3 +1,6 @@
+### 1.0.5: 27th August 2017
+* If user is using Sage, default path to be app/models/
+
 ### 1.0.4: 06th February 2017
 * Add PHP and YML file support
 

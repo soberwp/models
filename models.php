@@ -1,4 +1,5 @@
 <?php
+
 namespace Sober\Models;
 
 use Sober\Models\Loader;
