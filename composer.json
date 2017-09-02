@@ -18,10 +18,11 @@
     "issues": "https://github.com/soberwp/models/issues"
   },
   "require": {
-    "php": ">=5.4.0",
+    "php": ">=7",
     "composer/installers": "~1.0",
     "hassankhan/config": "^0.10.0",
-    "symfony/yaml": "^3.2"
+    "symfony/yaml": "^3.3",
+    "johnbillion/extended-cpts": "^4.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "2.*"
@@ -30,7 +31,8 @@
     "psr-4": {
       "Sober\\Models\\": "src/",
       "Sober\\Models\\Model\\": "src/Model/"
-    }
+    },
+    "files": ["dist/johnbillion/extended-cpts/extended-cpts.php"]
   },
   "scripts": {
     "test": [
