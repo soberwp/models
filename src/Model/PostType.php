@@ -92,10 +92,10 @@ class PostType extends Model
     /**
      * Register
      *
-     * Run WP register_post_type()
+     * Run extended-cpts register_extended_post_type()
      */
     protected function register()
     {
-        register_post_type($this->name, $this->args);
+        register_extended_post_type($this->name, $this->args);
     }
 }

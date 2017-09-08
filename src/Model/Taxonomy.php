@@ -93,10 +93,10 @@ class Taxonomy extends Model
     /**
      * Register
      *
-     * Run WP register_taxonomy()
+     * Run extended-cpts register_extended_taxonomy()
      */
     protected function register()
     {
-        register_taxonomy($this->name, $this->links, $this->args);
+        register_extended_taxonomy($this->name, $this->links, $this->args);
     }
 }
