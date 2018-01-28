@@ -7,6 +7,8 @@ use Sober\Models\Loader;
 /**
  * Hook
  */
-add_action('init', function () {
-    new Loader();
-});
+if (function_exists('add_action')) {
+    add_action('init', function () {
+        new Loader();
+    });
+}
