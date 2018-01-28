@@ -27,6 +27,8 @@ require(file_exists($composer = __DIR__ . '/vendor/autoload.php') ? $composer : 
 /**
  * Hook
  */
-add_action('init', function () {
-    new Loader();
-});
+if (function_exists('add_action')) {
+    add_action('init', function () {
+        new Loader();
+    });
+}
