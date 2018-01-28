@@ -27,7 +27,7 @@ $ composer require soberwp/models:1.0.5-p
 
 #### Requirements:
 
-* [PHP](http://php.net/manual/en/install.php) >= 5.6.x
+* [PHP](http://php.net/manual/en/install.php) >= 7.0
 
 ## Setup
 
