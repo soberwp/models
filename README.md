@@ -27,11 +27,11 @@ $ composer require soberwp/models:1.0.5-p
 
 #### Requirements:
 
-* [PHP](http://php.net/manual/en/install.php) >= 7.0
+* [PHP](http://php.net/manual/en/install.php) >= 5.6.x
 
 ## Setup
 
-By default, create folder `models/` within the active theme directory. 
+By default, create foldexr `models/` within the active theme directory. 
 
 If you are a [Roots Sage](https://roots.io/sage/) the default folder is `app/models/`
 

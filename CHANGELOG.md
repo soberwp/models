@@ -1,6 +1,4 @@
 ### 1.0.6: 28th Janurary 2018
-* Utilize the [extended-cpts](https://github.com/johnbillion/extended-cpts) library by johnbillion to provide extended functionality to custom post types and taxonomies.
-* Change PHP requirement to >=7
 * Add if function_exists for add_action
 
 ### 1.0.5: 27th August 2017
