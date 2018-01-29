@@ -30,15 +30,10 @@
     "psr-4": {
       "Sober\\Models\\": "src/",
       "Sober\\Models\\Model\\": "src/Model/"
-<<<<<<< HEAD
     },
     "files": [
-      "models.php",
-      "dist/johnbillion/extended-cpts/extended-cpts.php"
+      "models.php"
     ]
-=======
-    }
->>>>>>> master
   },
   "scripts": {
     "test": [
