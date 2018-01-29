@@ -96,6 +96,6 @@ class PostType extends Model
      */
     protected function register()
     {
-        register_extended_post_type($this->name, $this->args);
+        register_post_type($this->name, $this->args);
     }
 }

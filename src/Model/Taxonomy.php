@@ -97,6 +97,6 @@ class Taxonomy extends Model
      */
     protected function register()
     {
-        register_extended_taxonomy($this->name, $this->links, $this->args);
+        register_taxonomy($this->name, $this->links, $this->args);
     }
 }
