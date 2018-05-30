@@ -8,15 +8,15 @@ WordPress plugin to create custom post types and taxonomies using JSON, YAML or 
 
 Recommended method/s; 
 
-[Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
+[Roots Bedrock](https://roots.io/bedrock/)
 ```shell
-$ composer require soberwp/models
-$ wp plugin activate models
+$ composer require soberwp/models:1.0.6
 ```
+**Models** is a mu-plugin so it doesn't have to be activated.
 
 [Roots Sage](https://roots.io/sage/)
 ```shell
-$ composer require soberwp/models:1.0.5-p
+$ composer require soberwp/models:1.0.6-p
 ```
 
 #### Manual:
