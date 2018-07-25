@@ -90,12 +90,19 @@ class PostType extends Model
     }
 
     /**
-     * Register
-     *
-     * Run extended-cpts register_extended_post_type()
+     * Register Post Type
+     * 
+     * Uses extended-cpts if available.
+     * @see https://github.com/johnbillion/extended-cpts
+     * 
+     * @return void
      */
     protected function register()
     {
-        register_post_type($this->name, $this->args);
+        if (function_exists('register_extended_post_type')) {
+            register_extended_post_type($this->name, $this->args);
+        } else {
+            register_post_type($this->name, $this->args);
+        }
     }
 }
