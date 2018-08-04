@@ -10,13 +10,13 @@ Recommended methods:
 
 [Roots Bedrock](https://roots.io/bedrock/)
 ```shell
-$ composer require soberwp/models:1.0.6
+$ composer require soberwp/models:1.1.0
 ```
 **Models** is a mu-plugin so it doesn't have to be activated.
 
 [Roots Sage](https://roots.io/sage/)
 ```shell
-$ composer require soberwp/models:1.0.6-p
+$ composer require soberwp/models:1.1.0-p
 ```
 
 #### Manual:
@@ -51,7 +51,7 @@ The data structure follows a similar data structure to WordPress taxonomies and 
 
 If values are not specified, defaults are the same as WordPress defaults.
 
-Additionally, if the [Extended CPTs](https://github.com/johnbillion/extended-cpts) library is available, Models will use it when registering your post types and taxonomies instead allowing extended functionality within' your Models.
+Additionally, if the [Extended CPTs](https://github.com/johnbillion/extended-cpts) library is available, Models will use it when registering your post types and taxonomies instead allowing extended functionality within your Models.
 
 Extracted examples presented below are in JSON format.
 

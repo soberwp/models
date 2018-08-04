@@ -138,6 +138,18 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
     }
 
     /**
+     * Merge config from another instance
+     *
+     * @param ConfigInterface $config
+     * @return ConfigInterface
+     */
+    public function merge(ConfigInterface $config)
+    {
+        $this->data = array_replace_recursive($this->data, $config->all());
+        return $this;
+    }
+
+    /**
      * {@inheritDoc}
      */
     public function all()
@@ -261,5 +273,17 @@ abstract class AbstractConfig implements ArrayAccess, ConfigInterface, Iterator
     public function valid()
     {
         return (is_array($this->data) ? key($this->data) !== null : false);
+    }
+
+    /**
+     * Remove a value using the offset as a key
+     *
+     * @param  string $key
+     *
+     * @return void
+     */
+    public function remove($key)
+    {
+        $this->offsetUnset($key);
     }
 }
