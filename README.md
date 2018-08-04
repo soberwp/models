@@ -1,22 +1,22 @@
 # Models
 
-WordPress plugin to create custom post types and taxonomies using JSON, YAML or PHP files.
+Models is a WordPress plugin allowing you to create custom post types and taxonomies using JSON, YAML or PHP files.
 
 ## Installation
 
 #### Composer:
 
-Recommended method/s; 
+Recommended methods: 
 
-[Roots Bedrock](https://roots.io/bedrock/) and [WP-CLI](http://wp-cli.org/)
+[Roots Bedrock](https://roots.io/bedrock/)
 ```shell
-$ composer require soberwp/models
-$ wp plugin activate models
+$ composer require soberwp/models:1.0.6
 ```
+**Models** is a mu-plugin so it doesn't have to be activated.
 
 [Roots Sage](https://roots.io/sage/)
 ```shell
-$ composer require soberwp/models:1.0.5-p
+$ composer require soberwp/models:1.0.6-p
 ```
 
 #### Manual:
@@ -35,21 +35,23 @@ By default, create foldexr `models/` within the active theme directory.
 
 If you are a [Roots Sage](https://roots.io/sage/) the default folder is `app/models/`
 
-Alternatively, you can define a custom path using the filter below within your themes `functions.php` file; 
-```php
+Alternatively, you can define a custom path using the filter below within your themes `functions.php` file:
 
+```php
 add_filter('sober/models/path', function () {
     return get_stylesheet_directory() . '/your-custom-folder';
 });
 ```
 
-That's it, now go ahead and add `model-name.json` files, in the folder or subfolders to begin creating your models. Use [Unravel](https://github.com/soberwp/unravel) to automatically move the config files outside of your theme path for better separation of concerns. 
+That's it, now go ahead and add `model-name.json` files, in the folder or subfolders to begin creating your models. Use [Unravel](https://github.com/soberwp/unravel) to automatically move the config files outside of your theme path for better separation of concerns.
 
 ## Usage
 
-The data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place within `"config": {}`
+The data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place it within `"config": {}`
 
-If values are not specified, defaults are the same as WordPress defaults. 
+If values are not specified, defaults are the same as WordPress defaults.
+
+Additionally, if the [Extended CPTs](https://github.com/johnbillion/extended-cpts) library is available, Models will use it when registering your post types and taxonomies instead allowing extended functionality within' your Models.
 
 Extracted examples presented below are in JSON format.
 
@@ -224,6 +226,7 @@ Includes support for [github-updater](https://github.com/afragen/github-updater)
 * Clone [github-updater](https://github.com/afragen/github-updater) to your sites plugins/ folder
 * Activate via WordPress
 
-## Social
+## Other
 
-* For Models updates and other WordPress dev, follow [@withjacoby](https://twitter.com/withjacoby)
+* For updates follow [@withjacoby](https://twitter.com/withjacoby)
+* You can also [hire me](mailto:darren@jacoby.co.za) for WordPress or frontend work
