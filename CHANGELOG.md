@@ -1,3 +1,7 @@
+### 1.1.0: 04 August 2018
+* Add extended-cpts support
+* Update dependencies
+
 ### 1.0.6: 28th Janurary 2018
 * Add if function_exists for add_action
 
