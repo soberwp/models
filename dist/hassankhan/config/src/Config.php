@@ -22,7 +22,7 @@ class Config extends AbstractConfig
      *
      * @var array
      */
-    private $supportedFileParsers = array(
+    protected $supportedFileParsers = array(
         'Noodlehaus\FileParser\Php',
         'Noodlehaus\FileParser\Ini',
         'Noodlehaus\FileParser\Json',
@@ -83,24 +83,15 @@ class Config extends AbstractConfig
      */
     private function getParser($extension)
     {
-        $parser = null;
-
         foreach ($this->supportedFileParsers as $fileParser) {
-            $tempParser = new $fileParser;
-
-            if (in_array($extension, $tempParser->getSupportedExtensions($extension))) {
-                $parser = $tempParser;
-                continue;
+            if (in_array($extension, $fileParser::getSupportedExtensions($extension))) {
+                return new $fileParser();
             }
 
         }
 
         // If none exist, then throw an exception
-        if ($parser === null) {
-            throw new UnsupportedFormatException('Unsupported configuration format');
-        }
-
-        return $parser;
+        throw new UnsupportedFormatException('Unsupported configuration format');
     }
 
     /**

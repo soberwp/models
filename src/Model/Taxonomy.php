@@ -91,12 +91,19 @@ class Taxonomy extends Model
     }
 
     /**
-     * Register
-     *
-     * Run extended-cpts register_extended_taxonomy()
+     * Register Taxonomy
+     * 
+     * Uses extended-cpts if available.
+     * @see https://github.com/johnbillion/extended-cpts
+     * 
+     * @return void
      */
     protected function register()
     {
-        register_taxonomy($this->name, $this->links, $this->args);
+        if (function_exists('register_extended_taxonomy')) {
+            register_extended_taxonomy($this->name, $this->links, $this->args);
+        } else {
+            register_taxonomy($this->name, $this->links, $this->args);
+        }
     }
 }
