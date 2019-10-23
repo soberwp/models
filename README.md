@@ -207,6 +207,11 @@ Create a custom taxonomy.
   * `"type": "tax"`
   * `"type": "category"` or `"type": "cat"` creates a category taxonomy.
   * `"type": "tag"` creates a tag taxonomy.
+  
+## Support
+
+* Follow [@withjacoby](https://twitter.com/withjacoby) on Twitter
+* Buy me a beer or pay my rent, [paypal.me/darrenjacoby](https://paypal.me/darrenjacoby)
 
 ## Updates
 
@@ -225,8 +230,3 @@ Includes support for [github-updater](https://github.com/afragen/github-updater)
 * Download [github-updater](https://github.com/afragen/github-updater)
 * Clone [github-updater](https://github.com/afragen/github-updater) to your sites plugins/ folder
 * Activate via WordPress
-
-## Other
-
-* For updates follow [@withjacoby](https://twitter.com/withjacoby)
-* You can also [hire me](mailto:darren@jacoby.co.za) for WordPress or frontend work
