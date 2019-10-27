@@ -31,7 +31,7 @@ $ composer require soberwp/models:1.1.0-p
 
 ## Setup
 
-By default, create foldexr `models/` within the active theme directory. 
+By default, create folder `models/` within the active theme directory. 
 
 If you are a [Roots Sage](https://roots.io/sage/) the default folder is `app/models/`
 
@@ -47,7 +47,7 @@ That's it, now go ahead and add `model-name.json` files, in the folder or subfol
 
 ## Usage
 
-The data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developers reference and place it within `"config": {}`
+The data structure follows a similar data structure to WordPress taxonomies and post types arrays, so if an config option is missing from the examples below, follow the developer's reference and place it within `"config": {}`
 
 If values are not specified, defaults are the same as WordPress defaults.
 
