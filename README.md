@@ -2,6 +2,8 @@
 
 Models is a WordPress plugin allowing you to create custom post types and taxonomies using JSON, YAML or PHP files.
 
+**[You can now set post types and taxonomies using Intervention 2.x.x.](https://github.com/soberwp/intervention)**
+
 ## Installation
 
 #### Composer:
